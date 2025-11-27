@@ -1,0 +1,48 @@
+name: lens_craft
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  # Core Logic
+  camera: ^0.10.5+9
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  uuid: ^4.2.1
+  intl: ^0.19.0
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  
+  # Database (Hive)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Image & PDF
+  image: ^4.1.3
+  pdf: ^3.10.4
+  printing: ^5.11.1
+  flutter_image_compress: ^2.1.0
+  
+  # UI
+  google_fonts: ^6.1.0
+  colorfilter_generator: ^0.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  riverpod_generator: ^2.3.3
+  build_runner: ^2.4.7
+  # Hive Generator
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
