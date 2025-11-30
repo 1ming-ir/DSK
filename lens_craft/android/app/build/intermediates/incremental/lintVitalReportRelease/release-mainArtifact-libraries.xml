@@ -43,6 +43,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="D:\Project\Cursor\DSK\lens_craft\android@@:image_cropper::release"
+      jars="C:\Users\34151\AppData\Local\Pub\Cache\hosted\pub.dev\image_cropper-5.0.1\android\build\.transforms\fd3001bc91c6e0f8c590f5baba6c3806\transformed\out\jars\classes.jar;C:\Users\34151\AppData\Local\Pub\Cache\hosted\pub.dev\image_cropper-5.0.1\android\build\.transforms\fd3001bc91c6e0f8c590f5baba6c3806\transformed\out\jars\libs\R.jar"
+      resolved="vn.hunghd.flutter.plugins.imagecropper:image_cropper:unspecified"
+      folder="C:\Users\34151\AppData\Local\Pub\Cache\hosted\pub.dev\image_cropper-5.0.1\android\build\.transforms\fd3001bc91c6e0f8c590f5baba6c3806\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release"
       jars="C:\Users\34151\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.15\android\build\.transforms\ee08570f29c5603c60536508fff2f9ed\transformed\out\jars\classes.jar;C:\Users\34151\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.15\android\build\.transforms\ee08570f29c5603c60536508fff2f9ed\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
@@ -415,6 +428,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.github.yalantis:ucrop:2.2.8@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\0cbeaf05cb3e65b87779e52d375ac60a\transformed\jetified-ucrop-2.2.8\jars\classes.jar"
+      resolved="com.github.yalantis:ucrop:2.2.8"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\0cbeaf05cb3e65b87779e52d375ac60a\transformed\jetified-ucrop-2.2.8"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.exifinterface:exifinterface:1.3.3@aar"
       jars="C:\Users\34151\.gradle\caches\transforms-3\e2b38626f2d4921d0a40959b234f5c1a\transformed\exifinterface-1.3.3\jars\classes.jar"
       resolved="androidx.exifinterface:exifinterface:1.3.3"
@@ -432,6 +458,84 @@
       jars="C:\Users\34151\.gradle\caches\transforms-3\0e88aed94bf0462ed7354fe912602543\transformed\heifwriter-1.0.0\jars\classes.jar"
       resolved="androidx.heifwriter:heifwriter:1.0.0"
       folder="C:\Users\34151\.gradle\caches\transforms-3\0e88aed94bf0462ed7354fe912602543\transformed\heifwriter-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.appcompat:appcompat:1.3.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\44f3448b0705f1b637b2d27d5edbf7a2\transformed\appcompat-1.3.0\jars\classes.jar"
+      resolved="androidx.appcompat:appcompat:1.3.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\44f3448b0705f1b637b2d27d5edbf7a2\transformed\appcompat-1.3.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.transition:transition:1.4.1@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\b578da5dc94bf70590ae2b0e893ffe5e\transformed\transition-1.4.1\jars\classes.jar"
+      resolved="androidx.transition:transition:1.4.1"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\b578da5dc94bf70590ae2b0e893ffe5e\transformed\transition-1.4.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.appcompat:appcompat-resources:1.3.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\c0a48f5d1098b19534bfa281fe66bb05\transformed\jetified-appcompat-resources-1.3.0\jars\classes.jar"
+      resolved="androidx.appcompat:appcompat-resources:1.3.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\c0a48f5d1098b19534bfa281fe66bb05\transformed\jetified-appcompat-resources-1.3.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.drawerlayout:drawerlayout:1.0.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\3793cb4917920873e8edc1c81b194bf2\transformed\drawerlayout-1.0.0\jars\classes.jar"
+      resolved="androidx.drawerlayout:drawerlayout:1.0.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\3793cb4917920873e8edc1c81b194bf2\transformed\drawerlayout-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.vectordrawable:vectordrawable-animated:1.1.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\1be340c94d6c6371e89a082d74a0ef74\transformed\vectordrawable-animated-1.1.0\jars\classes.jar"
+      resolved="androidx.vectordrawable:vectordrawable-animated:1.1.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\1be340c94d6c6371e89a082d74a0ef74\transformed\vectordrawable-animated-1.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.vectordrawable:vectordrawable:1.1.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\1014b707780f828731937ced4545d880\transformed\vectordrawable-1.1.0\jars\classes.jar"
+      resolved="androidx.vectordrawable:vectordrawable:1.1.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\1014b707780f828731937ced4545d880\transformed\vectordrawable-1.1.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -467,6 +571,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.cursoradapter:cursoradapter:1.0.0@aar"
+      jars="C:\Users\34151\.gradle\caches\transforms-3\2267202c785fba8e7cbee653b3d2aea5\transformed\cursoradapter-1.0.0\jars\classes.jar"
+      resolved="androidx.cursoradapter:cursoradapter:1.0.0"
+      folder="C:\Users\34151\.gradle\caches\transforms-3\2267202c785fba8e7cbee653b3d2aea5\transformed\cursoradapter-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.concurrent:concurrent-futures:1.1.0@jar"
       jars="C:\Users\34151\.gradle\caches\modules-2\files-2.1\androidx.concurrent\concurrent-futures\1.1.0\50b7fb98350d5f42a4e49704b03278542293ba48\concurrent-futures-1.1.0.jar"
       resolved="androidx.concurrent:concurrent-futures:1.1.0"/>
@@ -487,6 +604,14 @@
       name="commons-io:commons-io:2.6@jar"
       jars="C:\Users\34151\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.6\815893df5f31da2ece4040fe0a12fd44b577afaf\commons-io-2.6.jar"
       resolved="commons-io:commons-io:2.6"/>
+  <library
+      name="com.squareup.okhttp3:okhttp:3.12.13@jar"
+      jars="C:\Users\34151\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.12.13\528e024f340da35cca5d679b631da85d8db9ed\okhttp-3.12.13.jar"
+      resolved="com.squareup.okhttp3:okhttp:3.12.13"/>
+  <library
+      name="com.squareup.okio:okio:1.15.0@jar"
+      jars="C:\Users\34151\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.15.0\bc28b5a964c8f5721eb58ee3f3c47a9bcbf4f4d8\okio-1.15.0.jar"
+      resolved="com.squareup.okio:okio:1.15.0"/>
   <library
       name="com.google.guava:listenablefuture:1.0@jar"
       jars="C:\Users\34151\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\1.0\c949a840a6acbc5268d088e47b04177bf90b3cad\listenablefuture-1.0.jar"

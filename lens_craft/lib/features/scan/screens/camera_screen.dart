@@ -246,12 +246,16 @@ class _CameraScreenState extends ConsumerState<CameraScreen> with WidgetsBinding
                     // Done Button
                     TextButton(
                       onPressed: _capturedImages.isNotEmpty
-                          ? () {
-                              Navigator.of(context).push(
+                          ? () async {
+                              final result = await Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) => EditorScreen(images: _capturedImages),
                                 ),
                               );
+                              // If document was saved, pop camera screen
+                              if (result == true && mounted) {
+                                Navigator.of(context).pop(true);
+                              }
                             }
                           : null,
                       child: Text(

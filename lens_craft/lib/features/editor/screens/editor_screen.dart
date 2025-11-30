@@ -4,8 +4,14 @@ import 'package:colorfilter_generator/colorfilter_generator.dart';
 import 'package:colorfilter_generator/presets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:lens_craft/core/theme/app_theme.dart';
 import 'package:lens_craft/core/services/pdf_service.dart';
+import 'package:lens_craft/core/services/document_service.dart';
+import 'package:lens_craft/models/scan_document.dart';
+import 'package:uuid/uuid.dart';
+import 'package:path/path.dart' as path;
+import 'package:intl/intl.dart';
 
 // 1. Define available filters
 enum FilterType {
@@ -78,6 +84,9 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
   late PageController _pageController;
   int _currentPage = 0;
   
+  // Use XFile list but allow it to be modified (replaced by cropped versions)
+  late List<XFile> _editableImages;
+  
   // Store filter state per page
   late List<FilterType> _pageFilters;
 
@@ -88,6 +97,8 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
   void initState() {
     super.initState();
     _pageController = PageController();
+    // Create a mutable copy of the list
+    _editableImages = List.from(widget.images);
     // Initialize all pages with 'original' filter
     _pageFilters = List.filled(widget.images.length, FilterType.original);
   }
@@ -101,7 +112,7 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
 
     try {
       // Convert XFile to File
-      final files = widget.images.map((x) => File(x.path)).toList();
+      final files = _editableImages.map((x) => File(x.path)).toList();
       
       // Generate PDF
       await PdfService.generatePdf(
@@ -128,6 +139,163 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
+  }
+
+  Future<void> _deleteCurrentPage() async {
+    if (_editableImages.length <= 1) {
+      // Can't delete the last page
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Cannot delete the last page')),
+        );
+      }
+      return;
+    }
+
+    // Show confirmation dialog
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Delete Page'),
+        content: const Text('Are you sure you want to delete this page?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Delete', style: TextStyle(color: Colors.red)),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true && mounted) {
+      setState(() {
+        _editableImages.removeAt(_currentPage);
+        _pageFilters.removeAt(_currentPage);
+        
+        // Adjust current page if needed
+        if (_currentPage >= _editableImages.length) {
+          _currentPage = _editableImages.length - 1;
+        }
+        
+        // Update PageController
+        if (_editableImages.isNotEmpty) {
+          _pageController.jumpToPage(_currentPage);
+        }
+      });
+
+      // If no pages left, go back
+      if (_editableImages.isEmpty) {
+        Navigator.of(context).pop();
+      }
+    }
+  }
+
+  Future<void> _saveDocument() async {
+    if (_editableImages.isEmpty) return;
+
+    try {
+      final docsDir = await DocumentService.getDocumentsDirectory();
+      final now = DateTime.now();
+      final docId = const Uuid().v4();
+      final timestamp = DateFormat('yyyyMMdd_HHmm').format(now);
+      final docTitle = 'Scan_$timestamp';
+
+      // Copy images to app documents directory
+      final savedImagePaths = <String>[];
+      for (int i = 0; i < _editableImages.length; i++) {
+        final sourceFile = File(_editableImages[i].path);
+        final fileName = '${docId}_page_$i.jpg';
+        final destPath = path.join(docsDir, fileName);
+        final destFile = await sourceFile.copy(destPath);
+        savedImagePaths.add(destFile.path);
+      }
+
+      // Create thumbnail from first page
+      final thumbnailPath = savedImagePaths.isNotEmpty 
+          ? path.join(docsDir, '${docId}_thumb.jpg')
+          : null;
+      if (thumbnailPath != null && savedImagePaths.isNotEmpty) {
+        final thumbSource = File(savedImagePaths[0]);
+        await thumbSource.copy(thumbnailPath);
+      }
+
+      // Create document
+      final document = ScanDocument(
+        id: docId,
+        title: docTitle,
+        createdAt: now,
+        updatedAt: now,
+        pageCount: _editableImages.length,
+        thumbnailPath: thumbnailPath,
+        imagePaths: savedImagePaths,
+        filterTypes: _pageFilters.map((f) => f.name).toList(),
+      );
+
+      await DocumentService.saveDocument(document);
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Document saved successfully!')),
+        );
+        Navigator.of(context).pop(true); // Return true to indicate save success
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to save: $e')),
+        );
+      }
+    }
+  }
+
+  Future<void> _cropCurrentImage() async {
+    try {
+      final currentImagePath = _editableImages[_currentPage].path;
+      debugPrint('Starting crop for: $currentImagePath');
+      
+      final croppedFile = await ImageCropper().cropImage(
+        sourcePath: currentImagePath,
+        compressFormat: ImageCompressFormat.jpg,
+        compressQuality: 100,
+        uiSettings: [
+          AndroidUiSettings(
+            toolbarTitle: 'Crop',
+            toolbarColor: AppTheme.primaryColor,
+            toolbarWidgetColor: Colors.white,
+            initAspectRatio: CropAspectRatioPreset.original,
+            lockAspectRatio: false,
+            hideBottomControls: false,
+            showCropGrid: true,
+          ),
+          IOSUiSettings(
+            title: 'Crop',
+            hidesNavigationBar: false,
+            aspectRatioPickerButtonHidden: false,
+          ),
+        ],
+      );
+
+      if (croppedFile != null) {
+        debugPrint('Crop successful: ${croppedFile.path}');
+        setState(() {
+          // Update the list with the new cropped image
+          _editableImages[_currentPage] = XFile(croppedFile.path);
+        });
+      } else {
+        debugPrint('Crop cancelled by user');
+      }
+    } catch (e) {
+      debugPrint('Crop error: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Crop failed: $e')),
+        );
+      }
+    }
   }
 
   void _applyFilterToCurrentPage(FilterType type) {
@@ -182,7 +350,7 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
                                 borderRadius: BorderRadius.circular(6),
                                 child: FilterUtils.applyFilter(
                                   Image.file(
-                                    File(widget.images[_currentPage].path),
+                                    File(_editableImages[_currentPage].path),
                                     fit: BoxFit.cover,
                                   ),
                                   filter,
@@ -216,10 +384,48 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
         backgroundColor: const Color(0xFF1A1A1A),
         iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
-          '${_currentPage + 1} / ${widget.images.length}',
+          '${_editableImages.isEmpty ? 0 : _currentPage + 1} / ${_editableImages.length}',
           style: const TextStyle(color: Colors.white),
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () async {
+            // Ask user if they want to save before leaving
+            final shouldSave = await showDialog<bool>(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: const Text('Save Document?'),
+                content: const Text('Do you want to save this document before leaving?'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, false),
+                    child: const Text('Discard'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, true),
+                    child: const Text('Save'),
+                  ),
+                ],
+              ),
+            );
+
+            if (shouldSave == true) {
+              await _saveDocument();
+            } else {
+              if (mounted) {
+                Navigator.of(context).pop();
+              }
+            }
+          },
+        ),
         actions: [
+          TextButton(
+            onPressed: _saveDocument,
+            child: const Text(
+              'Save',
+              style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold),
+            ),
+          ),
           TextButton(
             onPressed: _isExporting ? null : _saveAndSharePdf,
             child: _isExporting 
@@ -240,21 +446,23 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
           Expanded(
             child: PageView.builder(
               controller: _pageController,
-              itemCount: widget.images.length,
+              itemCount: _editableImages.length,
               onPageChanged: (index) {
                 setState(() {
                   _currentPage = index;
                 });
               },
               itemBuilder: (context, index) {
+                // Use a key to force rebuild if path changes (e.g. after crop)
                 return Center(
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Hero(
-                      tag: widget.images[index].path,
+                      tag: _editableImages[index].path,
                       child: FilterUtils.applyFilter(
                         Image.file(
-                          File(widget.images[index].path),
+                          File(_editableImages[index].path),
+                          key: ValueKey(_editableImages[index].path), 
                           fit: BoxFit.contain,
                         ),
                         _pageFilters[index],
@@ -273,10 +481,14 @@ class _EditorScreenState extends ConsumerState<EditorScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildToolIcon(Icons.crop, 'Crop', () {}),
+                _buildToolIcon(Icons.crop, 'Crop', _cropCurrentImage),
                 _buildToolIcon(Icons.filter_b_and_w, 'Filter', _showFilterBottomSheet),
-                _buildToolIcon(Icons.rotate_right, 'Rotate', () {}),
-                _buildToolIcon(Icons.delete_outline, 'Delete', () {}),
+                _buildToolIcon(Icons.rotate_right, 'Rotate', () {
+                   // Rotate is usually handled by Cropper, but we can add simple rotation later if needed
+                   // Or just reopen crop tool for rotation.
+                   _cropCurrentImage(); // Re-use crop tool for rotation for MVP
+                }),
+                _buildToolIcon(Icons.delete_outline, 'Delete', _deleteCurrentPage),
               ],
             ),
           ),
