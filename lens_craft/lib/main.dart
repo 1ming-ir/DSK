@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lens_craft/core/theme/app_theme.dart';
+import 'package:lens_craft/core/services/document_service.dart';
 import 'package:lens_craft/features/home/screens/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DocumentService.init();
   runApp(const ProviderScope(child: LensCraftApp()));
 }
 

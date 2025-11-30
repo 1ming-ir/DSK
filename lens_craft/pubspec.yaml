@@ -30,6 +30,7 @@ dependencies:
   pdf: ^3.10.4
   printing: ^5.11.1
   flutter_image_compress: ^2.1.0
+  image_cropper: ^5.0.0 # Added manually as previous command failed silently
   
   # UI
   google_fonts: ^6.1.0

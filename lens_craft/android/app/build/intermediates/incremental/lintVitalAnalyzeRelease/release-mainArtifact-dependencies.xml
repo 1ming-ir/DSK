@@ -1,6 +1,6 @@
 <dependencies>
   <compile
-      roots="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Project\Cursor\DSK\lens_craft\android@@:camera_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_image_compress_common::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release,D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:printing::release,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:flutter_embedding_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,androidx.fragment:fragment:1.7.1@aar,androidx.activity:activity:1.8.1@aar,androidx.loader:loader:1.0.0@aar,androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar,androidx.lifecycle:lifecycle-livedata:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0@aar,androidx.core:core-ktx:1.13.1@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.13.1@aar,androidx.core:core:1.13.1@aar,androidx.lifecycle:lifecycle-runtime:2.7.0@aar,androidx.lifecycle:lifecycle-process:2.7.0@aar,androidx.lifecycle:lifecycle-common-java8:2.7.0@jar,androidx.lifecycle:lifecycle-common:2.7.0@jar,androidx.window:window:1.2.0@aar,androidx.window:window-java:1.2.0@aar,androidx.annotation:annotation-experimental:1.4.0@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.annotation:annotation-jvm:1.9.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.1@jar,org.jetbrains.kotlin:kotlin-stdlib:1.9.24@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:arm64_v8a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:x86_64_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,org.jetbrains:annotations:23.0.0@jar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.2.0@aar">
+      roots="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Project\Cursor\DSK\lens_craft\android@@:camera_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_image_compress_common::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release,D:\Project\Cursor\DSK\lens_craft\android@@:image_cropper::release,D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:printing::release,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:flutter_embedding_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,androidx.fragment:fragment:1.7.1@aar,androidx.activity:activity:1.8.1@aar,androidx.loader:loader:1.0.0@aar,androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar,androidx.lifecycle:lifecycle-livedata:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0@aar,androidx.core:core-ktx:1.13.1@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.13.1@aar,androidx.core:core:1.13.1@aar,androidx.lifecycle:lifecycle-runtime:2.7.0@aar,androidx.lifecycle:lifecycle-process:2.7.0@aar,androidx.lifecycle:lifecycle-common-java8:2.7.0@jar,androidx.lifecycle:lifecycle-common:2.7.0@jar,androidx.window:window:1.2.0@aar,androidx.window:window-java:1.2.0@aar,androidx.annotation:annotation-experimental:1.4.0@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.annotation:annotation-jvm:1.9.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.1@jar,org.jetbrains.kotlin:kotlin-stdlib:1.9.24@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:arm64_v8a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:x86_64_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,org.jetbrains:annotations:23.0.0@jar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.2.0@aar">
     <dependency
         name="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar"
         simpleName="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar"/>
@@ -13,6 +13,9 @@
     <dependency
         name="D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release"
         simpleName="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle"/>
+    <dependency
+        name="D:\Project\Cursor\DSK\lens_craft\android@@:image_cropper::release"
+        simpleName="vn.hunghd.flutter.plugins.imagecropper:image_cropper"/>
     <dependency
         name="D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release"
         simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
@@ -132,7 +135,7 @@
         simpleName="androidx.tracing:tracing"/>
   </compile>
   <package
-      roots="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Project\Cursor\DSK\lens_craft\android@@:camera_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_image_compress_common::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release,D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:printing::release,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:flutter_embedding_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,androidx.exifinterface:exifinterface:1.3.3@aar,androidx.heifwriter:heifwriter:1.0.0@aar,androidx.fragment:fragment:1.7.1@aar,androidx.window:window:1.2.0@aar,androidx.window:window-java:1.2.0@aar,androidx.activity:activity:1.8.1@aar,androidx.loader:loader:1.0.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar,androidx.lifecycle:lifecycle-livedata:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0@aar,androidx.core:core-ktx:1.13.1@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.13.1@aar,androidx.core:core:1.13.1@aar,androidx.lifecycle:lifecycle-runtime:2.7.0@aar,androidx.lifecycle:lifecycle-process:2.7.0@aar,androidx.lifecycle:lifecycle-common-java8:2.7.0@jar,androidx.savedstate:savedstate:1.2.1@aar,androidx.lifecycle:lifecycle-common:2.7.0@jar,androidx.profileinstaller:profileinstaller:1.3.1@aar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.2.0@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.concurrent:concurrent-futures:1.1.0@jar,androidx.window.extensions.core:core:1.0.0@aar,androidx.annotation:annotation-jvm:1.9.1@jar,androidx.annotation:annotation-experimental:1.4.0@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.1@jar,org.jetbrains.kotlin:kotlin-stdlib:1.9.24@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:arm64_v8a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:x86_64_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,commons-io:commons-io:2.6@jar,org.jetbrains:annotations:23.0.0@jar,com.google.guava:listenablefuture:1.0@jar">
+      roots="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar,D:\Project\Cursor\DSK\lens_craft\android@@:camera_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_image_compress_common::release,D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release,D:\Project\Cursor\DSK\lens_craft\android@@:image_cropper::release,D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release,D:\Project\Cursor\DSK\lens_craft\android@@:printing::release,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:flutter_embedding_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,com.github.yalantis:ucrop:2.2.8@aar,androidx.exifinterface:exifinterface:1.3.3@aar,androidx.heifwriter:heifwriter:1.0.0@aar,androidx.appcompat:appcompat:1.3.0@aar,androidx.fragment:fragment:1.7.1@aar,androidx.window:window:1.2.0@aar,androidx.window:window-java:1.2.0@aar,androidx.transition:transition:1.4.1@aar,androidx.activity:activity:1.8.1@aar,androidx.loader:loader:1.0.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar,androidx.lifecycle:lifecycle-livedata:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0@aar,androidx.core:core-ktx:1.13.1@aar,androidx.appcompat:appcompat-resources:1.3.0@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.core:core:1.13.1@aar,androidx.core:core:1.13.1@aar,androidx.lifecycle:lifecycle-runtime:2.7.0@aar,androidx.lifecycle:lifecycle-process:2.7.0@aar,androidx.lifecycle:lifecycle-common-java8:2.7.0@jar,androidx.savedstate:savedstate:1.2.1@aar,androidx.lifecycle:lifecycle-common:2.7.0@jar,androidx.profileinstaller:profileinstaller:1.3.1@aar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.2.0@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.concurrent:concurrent-futures:1.1.0@jar,androidx.window.extensions.core:core:1.0.0@aar,androidx.annotation:annotation-jvm:1.9.1@jar,androidx.annotation:annotation-experimental:1.4.0@aar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1@jar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.1@jar,org.jetbrains.kotlin:kotlin-stdlib:1.9.24@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:arm64_v8a_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,io.flutter:x86_64_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar,commons-io:commons-io:2.6@jar,com.squareup.okhttp3:okhttp:3.12.13@jar,org.jetbrains:annotations:23.0.0@jar,com.squareup.okio:okio:1.15.0@jar,com.google.guava:listenablefuture:1.0@jar">
     <dependency
         name="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar:unspecified@jar"
         simpleName="__local_aars__:D:\Project\Cursor\DSK\lens_craft\android\app\build\intermediates\flutter\release\libs.jar"/>
@@ -146,6 +149,9 @@
         name="D:\Project\Cursor\DSK\lens_craft\android@@:flutter_plugin_android_lifecycle::release"
         simpleName="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle"/>
     <dependency
+        name="D:\Project\Cursor\DSK\lens_craft\android@@:image_cropper::release"
+        simpleName="vn.hunghd.flutter.plugins.imagecropper:image_cropper"/>
+    <dependency
         name="D:\Project\Cursor\DSK\lens_craft\android@@:path_provider_android::release"
         simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
     <dependency
@@ -158,11 +164,17 @@
         name="io.flutter:flutter_embedding_release:1.0.0-a18df97ca57a249df5d8d68cd0820600223ce262@jar"
         simpleName="io.flutter:flutter_embedding_release"/>
     <dependency
+        name="com.github.yalantis:ucrop:2.2.8@aar"
+        simpleName="com.github.yalantis:ucrop"/>
+    <dependency
         name="androidx.exifinterface:exifinterface:1.3.3@aar"
         simpleName="androidx.exifinterface:exifinterface"/>
     <dependency
         name="androidx.heifwriter:heifwriter:1.0.0@aar"
         simpleName="androidx.heifwriter:heifwriter"/>
+    <dependency
+        name="androidx.appcompat:appcompat:1.3.0@aar"
+        simpleName="androidx.appcompat:appcompat"/>
     <dependency
         name="androidx.fragment:fragment:1.7.1@aar"
         simpleName="androidx.fragment:fragment"/>
@@ -172,6 +184,9 @@
     <dependency
         name="androidx.window:window-java:1.2.0@aar"
         simpleName="androidx.window:window-java"/>
+    <dependency
+        name="androidx.transition:transition:1.4.1@aar"
+        simpleName="androidx.transition:transition"/>
     <dependency
         name="androidx.activity:activity:1.8.1@aar"
         simpleName="androidx.activity:activity"/>
@@ -200,8 +215,20 @@
         name="androidx.core:core-ktx:1.13.1@aar"
         simpleName="androidx.core:core-ktx"/>
     <dependency
+        name="androidx.appcompat:appcompat-resources:1.3.0@aar"
+        simpleName="androidx.appcompat:appcompat-resources"/>
+    <dependency
+        name="androidx.drawerlayout:drawerlayout:1.0.0@aar"
+        simpleName="androidx.drawerlayout:drawerlayout"/>
+    <dependency
         name="androidx.customview:customview:1.0.0@aar"
         simpleName="androidx.customview:customview"/>
+    <dependency
+        name="androidx.vectordrawable:vectordrawable-animated:1.1.0@aar"
+        simpleName="androidx.vectordrawable:vectordrawable-animated"/>
+    <dependency
+        name="androidx.vectordrawable:vectordrawable:1.1.0@aar"
+        simpleName="androidx.vectordrawable:vectordrawable"/>
     <dependency
         name="androidx.core:core:1.13.1@aar"
         simpleName="androidx.core:core"/>
@@ -245,6 +272,9 @@
         name="androidx.interpolator:interpolator:1.0.0@aar"
         simpleName="androidx.interpolator:interpolator"/>
     <dependency
+        name="androidx.cursoradapter:cursoradapter:1.0.0@aar"
+        simpleName="androidx.cursoradapter:cursoradapter"/>
+    <dependency
         name="androidx.concurrent:concurrent-futures:1.1.0@jar"
         simpleName="androidx.concurrent:concurrent-futures"/>
     <dependency
@@ -281,8 +311,14 @@
         name="commons-io:commons-io:2.6@jar"
         simpleName="commons-io:commons-io"/>
     <dependency
+        name="com.squareup.okhttp3:okhttp:3.12.13@jar"
+        simpleName="com.squareup.okhttp3:okhttp"/>
+    <dependency
         name="org.jetbrains:annotations:23.0.0@jar"
         simpleName="org.jetbrains:annotations"/>
+    <dependency
+        name="com.squareup.okio:okio:1.15.0@jar"
+        simpleName="com.squareup.okio:okio"/>
     <dependency
         name="com.google.guava:listenablefuture:1.0@jar"
         simpleName="com.google.guava:listenablefuture"/>
